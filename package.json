@@ -1,0 +1,36 @@
+{
+    "scripts": {
+        "build": "tsc",
+        "dev": "nodemon --exec ts-node src/app.ts",
+        "start": "node dist/app.js",
+        "postbuild": "cpx \"src/views/**/*\" dist/views && cpx \"src/public/**/*\" dist/public"
+    },
+    "dependencies": {
+        "@prisma/client": "5.20.0",
+        "@types/jsonwebtoken": "^9.0.7",
+        "bcrypt": "^5.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "ejs": "^3.1.10",
+        "express": "^5.0.0",
+        "express-rate-limit": "^7.4.1",
+        "express-validator": "^7.2.0",
+        "helmet": "^8.0.0",
+        "joi": "^17.13.3",
+        "jsonwebtoken": "^9.0.2",
+        "node-cron": "^3.0.3",
+        "winston": "^3.14.2"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^5.0.2",
+        "@types/cors": "^2.8.17",
+        "@types/helmet": "^4.0.0",
+        "@types/joi": "^17.2.3",
+        "@types/node": "^22.7.4",
+        "cpx": "^1.5.0",
+        "nodemon": "^3.1.7",
+        "prisma": "^5.20.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.2"
+    }
+}
